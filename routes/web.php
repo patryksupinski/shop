@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -39,6 +41,12 @@ Route::delete('/products/{product}', [ProductController::class, 'destroy'])->nam
 
 // Trasa do wyświetlania szczegółów produktu
 Route::get('/products/{product}', [ProductController::class, 'show'])->name('products.show');
+
+// Trasa do widoku listy zamówień
+Route::get('/orders', [OrderController::class, 'index'])->name('orders.index');
+
+// Trasa do widoku listy klientów
+Route::get('/customers', [CustomerController::class, 'index'])->name('customers.index');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
