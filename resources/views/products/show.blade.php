@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container mx-auto mt-8">
-        <h2 class="text-2xl font-semibold mb-4 text-center">{{ $product->name }}</h2>
+        <h2 class="text-white text-2xl font-semibold mb-4 text-center">{{ $product->name }}</h2>
         <div class="bg-white p-6 rounded-lg shadow-md">
             <p class="text-gray-600 mb-4"><strong>Description:</strong> {{ $product->description }}</p>
             <p class="text-gray-600 mb-4"><strong>Price:</strong> {{ $product->price }}</p>

@@ -21,6 +21,15 @@
                 <label for="stock_quantity" class="block text-white text-sm font-medium mb-2">Quantity</label>
                 <input type="number" step="1" class="border w-full p-2" id="stock_quantity" name="stock_quantity" required>
             </div>
+            <div class="mb-4">
+                <label for="categories" class="block text-white text-sm font-medium mb-2">Categories</label>
+                <select class="border w-full p-2" id="categories" name="categories">
+                    <option value="" selected disabled>Wybierz kategorię</option>
+                    @foreach($categories as $category)
+                        <option value="{{ $category->id }}">{{ $category->name }}</option>
+                    @endforeach
+                </select>
+            </div>
            <button type="submit" class="w-full bg-green-500 text-white px-4 py-2 rounded">Add Product</button>
         </form>
     </div>
